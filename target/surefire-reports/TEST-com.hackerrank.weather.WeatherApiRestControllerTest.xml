@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.hackerrank.weather.WeatherApiRestControllerTest" time="11.355" tests="6" errors="0" skipped="0" failures="6">
+  <properties>
+    <property name="gopherProxySet" value="false"/>
+    <property name="awt.toolkit" value="sun.lwawt.macosx.LWCToolkit"/>
+    <property name="java.specification.version" value="11"/>
+    <property name="sun.cpu.isalist" value=""/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/Users/ivohristov/Projects/WeatherTestApi/target/test-classes:/Users/ivohristov/Projects/WeatherTestApi/target/classes:/Users/ivohristov/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/2.2.1.RELEASE/spring-boot-starter-data-jpa-2.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/org/springframework/boot/spring-boot-starter-aop/2.2.1.RELEASE/spring-boot-starter-aop-2.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/org/springframework/spring-aop/5.2.1.RELEASE/spring-aop-5.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/org/aspectj/aspectjweaver/1.9.4/aspectjweaver-1.9.4.jar:/Users/ivohristov/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/2.2.1.RELEASE/spring-boot-starter-jdbc-2.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/com/zaxxer/HikariCP/3.4.1/HikariCP-3.4.1.jar:/Users/ivohristov/.m2/repository/org/springframework/spring-jdbc/5.2.1.RELEASE/spring-jdbc-5.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.1/jakarta.activation-api-1.2.1.jar:/Users/ivohristov/.m2/repository/jakarta/persistence/jakarta.persistence-api/2.2.3/jakarta.persistence-api-2.2.3.jar:/Users/ivohristov/.m2/repository/jakarta/transaction/jakarta.transaction-api/1.3.3/jakarta.transaction-api-1.3.3.jar:/Users/ivohristov/.m2/repository/org/hibernate/hibernate-core/5.4.8.Final/hibernate-core-5.4.8.Final.jar:/Users/ivohristov/.m2/repository/org/jboss/logging/jboss-logging/3.4.1.Final/jboss-logging-3.4.1.Final.jar:/Users/ivohristov/.m2/repository/org/javassist/javassist/3.24.0-GA/javassist-3.24.0-GA.jar:/Users/ivohristov/.m2/repository/net/bytebuddy/byte-buddy/1.10.2/byte-buddy-1.10.2.jar:/Users/ivohristov/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar:/Users/ivohristov/.m2/repository/org/jboss/jandex/2.0.5.Final/jandex-2.0.5.Final.jar:/Users/ivohristov/.m2/repository/com/fasterxml/classmate/1.5.1/classmate-1.5.1.jar:/Users/ivohristov/.m2/repository/org/dom4j/dom4j/2.1.1/dom4j-2.1.1.jar:/Users/ivohristov/.m2/repository/org/hibernate/common/hibernate-commons-annotations/5.1.0.Final/hibernate-commons-annotations-5.1.0.Final.jar:/Users/ivohristov/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar:/Users/ivohristov/.m2/repository/org/glassfish/jaxb/txw2/2.3.2/txw2-2.3.2.jar:/Users/ivohristov/.m2/repository/com/sun/istack/istack-commons-runtime/3.0.8/istack-commons-runtime-3.0.8.jar:/Users/ivohristov/.m2/repository/org/jvnet/staxex/stax-ex/1.8.1/stax-ex-1.8.1.jar:/Users/ivohristov/.m2/repository/com/sun/xml/fastinfoset/FastInfoset/1.2.16/FastInfoset-1.2.16.jar:/Users/ivohristov/.m2/repository/org/springframework/data/spring-data-jpa/2.2.1.RELEASE/spring-data-jpa-2.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/org/springframework/data/spring-data-commons/2.2.1.RELEASE/spring-data-commons-2.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/org/springframework/spring-orm/5.2.1.RELEASE/spring-orm-5.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/org/springframework/spring-context/5.2.1.RELEASE/spring-context-5.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/org/springframework/spring-tx/5.2.1.RELEASE/spring-tx-5.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/org/springframework/spring-beans/5.2.1.RELEASE/spring-beans-5.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/org/slf4j/slf4j-api/1.7.29/slf4j-api-1.7.29.jar:/Users/ivohristov/.m2/repository/org/springframework/spring-aspects/5.2.1.RELEASE/spring-aspects-5.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/org/springframework/boot/spring-boot-starter-web/2.2.1.RELEASE/spring-boot-starter-web-2.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/org/springframework/boot/spring-boot-starter/2.2.1.RELEASE/spring-boot-starter-2.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/org/springframework/boot/spring-boot/2.2.1.RELEASE/spring-boot-2.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/2.2.1.RELEASE/spring-boot-autoconfigure-2.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/org/springframework/boot/spring-boot-starter-logging/2.2.1.RELEASE/spring-boot-starter-logging-2.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar:/Users/ivohristov/.m2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar:/Users/ivohristov/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.12.1/log4j-to-slf4j-2.12.1.jar:/Users/ivohristov/.m2/repository/org/apache/logging/log4j/log4j-api/2.12.1/log4j-api-2.12.1.jar:/Users/ivohristov/.m2/repository/org/slf4j/jul-to-slf4j/1.7.29/jul-to-slf4j-1.7.29.jar:/Users/ivohristov/.m2/repository/jakarta/annotation/jakarta.annotation-api/1.3.5/jakarta.annotation-api-1.3.5.jar:/Users/ivohristov/.m2/repository/org/yaml/snakeyaml/1.25/snakeyaml-1.25.jar:/Users/ivohristov/.m2/repository/org/springframework/boot/spring-boot-starter-json/2.2.1.RELEASE/spring-boot-starter-json-2.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.10.0/jackson-databind-2.10.0.jar:/Users/ivohristov/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.10.0/jackson-annotations-2.10.0.jar:/Users/ivohristov/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.10.0/jackson-core-2.10.0.jar:/Users/ivohristov/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.10.0/jackson-datatype-jdk8-2.10.0.jar:/Users/ivohristov/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.10.0/jackson-datatype-jsr310-2.10.0.jar:/Users/ivohristov/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.10.0/jackson-module-parameter-names-2.10.0.jar:/Users/ivohristov/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/2.2.1.RELEASE/spring-boot-starter-tomcat-2.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.27/tomcat-embed-core-9.0.27.jar:/Users/ivohristov/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/9.0.27/tomcat-embed-el-9.0.27.jar:/Users/ivohristov/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/9.0.27/tomcat-embed-websocket-9.0.27.jar:/Users/ivohristov/.m2/repository/org/springframework/boot/spring-boot-starter-validation/2.2.1.RELEASE/spring-boot-starter-validation-2.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/jakarta/validation/jakarta.validation-api/2.0.1/jakarta.validation-api-2.0.1.jar:/Users/ivohristov/.m2/repository/org/hibernate/validator/hibernate-validator/6.0.18.Final/hibernate-validator-6.0.18.Final.jar:/Users/ivohristov/.m2/repository/org/springframework/spring-web/5.2.1.RELEASE/spring-web-5.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/org/springframework/spring-webmvc/5.2.1.RELEASE/spring-webmvc-5.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/org/springframework/spring-expression/5.2.1.RELEASE/spring-expression-5.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/org/springframework/boot/spring-boot-starter-test/2.2.1.RELEASE/spring-boot-starter-test-2.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/org/springframework/boot/spring-boot-test/2.2.1.RELEASE/spring-boot-test-2.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/2.2.1.RELEASE/spring-boot-test-autoconfigure-2.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/com/jayway/jsonpath/json-path/2.4.0/json-path-2.4.0.jar:/Users/ivohristov/.m2/repository/net/minidev/json-smart/2.3/json-smart-2.3.jar:/Users/ivohristov/.m2/repository/net/minidev/accessors-smart/1.2/accessors-smart-1.2.jar:/Users/ivohristov/.m2/repository/org/ow2/asm/asm/5.0.4/asm-5.0.4.jar:/Users/ivohristov/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.2/jakarta.xml.bind-api-2.3.2.jar:/Users/ivohristov/.m2/repository/org/junit/jupiter/junit-jupiter/5.5.2/junit-jupiter-5.5.2.jar:/Users/ivohristov/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.5.2/junit-jupiter-api-5.5.2.jar:/Users/ivohristov/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/ivohristov/.m2/repository/org/junit/platform/junit-platform-commons/1.5.2/junit-platform-commons-1.5.2.jar:/Users/ivohristov/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.5.2/junit-jupiter-params-5.5.2.jar:/Users/ivohristov/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.5.2/junit-jupiter-engine-5.5.2.jar:/Users/ivohristov/.m2/repository/org/junit/vintage/junit-vintage-engine/5.5.2/junit-vintage-engine-5.5.2.jar:/Users/ivohristov/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/Users/ivohristov/.m2/repository/org/junit/platform/junit-platform-engine/1.5.2/junit-platform-engine-1.5.2.jar:/Users/ivohristov/.m2/repository/junit/junit/4.12/junit-4.12.jar:/Users/ivohristov/.m2/repository/org/mockito/mockito-junit-jupiter/3.1.0/mockito-junit-jupiter-3.1.0.jar:/Users/ivohristov/.m2/repository/org/assertj/assertj-core/3.13.2/assertj-core-3.13.2.jar:/Users/ivohristov/.m2/repository/org/hamcrest/hamcrest/2.1/hamcrest-2.1.jar:/Users/ivohristov/.m2/repository/org/mockito/mockito-core/3.1.0/mockito-core-3.1.0.jar:/Users/ivohristov/.m2/repository/net/bytebuddy/byte-buddy-agent/1.10.2/byte-buddy-agent-1.10.2.jar:/Users/ivohristov/.m2/repository/org/objenesis/objenesis/2.6/objenesis-2.6.jar:/Users/ivohristov/.m2/repository/org/skyscreamer/jsonassert/1.5.0/jsonassert-1.5.0.jar:/Users/ivohristov/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/ivohristov/.m2/repository/org/springframework/spring-core/5.2.1.RELEASE/spring-core-5.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/org/springframework/spring-jcl/5.2.1.RELEASE/spring-jcl-5.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/org/springframework/spring-test/5.2.1.RELEASE/spring-test-5.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/org/xmlunit/xmlunit-core/2.6.3/xmlunit-core-2.6.3.jar:/Users/ivohristov/.m2/repository/org/projectlombok/lombok/1.18.10/lombok-1.18.10.jar:/Users/ivohristov/.m2/repository/com/h2database/h2/1.4.200/h2-1.4.200.jar:/Users/ivohristov/.m2/repository/org/mapstruct/mapstruct/1.5.2.Final/mapstruct-1.5.2.Final.jar:/Users/ivohristov/.m2/repository/org/mapstruct/mapstruct-processor/1.5.2.Final/mapstruct-processor-1.5.2.Final.jar:"/>
+    <property name="java.vm.vendor" value="Amazon.com Inc."/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://aws.amazon.com/corretto/"/>
+    <property name="user.timezone" value=""/>
+    <property name="java.vm.specification.version" value="11"/>
+    <property name="os.name" value="Mac OS X"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="BG"/>
+    <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/amazon-corretto-11.jdk/Contents/Home/lib"/>
+    <property name="sun.java.command" value="/Users/ivohristov/Projects/WeatherTestApi/target/surefire/surefirebooter16807483832154180952.jar /Users/ivohristov/Projects/WeatherTestApi/target/surefire 2022-08-09T10-56-10_016-jvmRun1 surefire12053649665447505686tmp surefire_015518445767300274034tmp"/>
+    <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/Users/ivohristov/Projects/WeatherTestApi/target/test-classes:/Users/ivohristov/Projects/WeatherTestApi/target/classes:/Users/ivohristov/.m2/repository/org/springframework/boot/spring-boot-starter-data-jpa/2.2.1.RELEASE/spring-boot-starter-data-jpa-2.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/org/springframework/boot/spring-boot-starter-aop/2.2.1.RELEASE/spring-boot-starter-aop-2.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/org/springframework/spring-aop/5.2.1.RELEASE/spring-aop-5.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/org/aspectj/aspectjweaver/1.9.4/aspectjweaver-1.9.4.jar:/Users/ivohristov/.m2/repository/org/springframework/boot/spring-boot-starter-jdbc/2.2.1.RELEASE/spring-boot-starter-jdbc-2.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/com/zaxxer/HikariCP/3.4.1/HikariCP-3.4.1.jar:/Users/ivohristov/.m2/repository/org/springframework/spring-jdbc/5.2.1.RELEASE/spring-jdbc-5.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/jakarta/activation/jakarta.activation-api/1.2.1/jakarta.activation-api-1.2.1.jar:/Users/ivohristov/.m2/repository/jakarta/persistence/jakarta.persistence-api/2.2.3/jakarta.persistence-api-2.2.3.jar:/Users/ivohristov/.m2/repository/jakarta/transaction/jakarta.transaction-api/1.3.3/jakarta.transaction-api-1.3.3.jar:/Users/ivohristov/.m2/repository/org/hibernate/hibernate-core/5.4.8.Final/hibernate-core-5.4.8.Final.jar:/Users/ivohristov/.m2/repository/org/jboss/logging/jboss-logging/3.4.1.Final/jboss-logging-3.4.1.Final.jar:/Users/ivohristov/.m2/repository/org/javassist/javassist/3.24.0-GA/javassist-3.24.0-GA.jar:/Users/ivohristov/.m2/repository/net/bytebuddy/byte-buddy/1.10.2/byte-buddy-1.10.2.jar:/Users/ivohristov/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar:/Users/ivohristov/.m2/repository/org/jboss/jandex/2.0.5.Final/jandex-2.0.5.Final.jar:/Users/ivohristov/.m2/repository/com/fasterxml/classmate/1.5.1/classmate-1.5.1.jar:/Users/ivohristov/.m2/repository/org/dom4j/dom4j/2.1.1/dom4j-2.1.1.jar:/Users/ivohristov/.m2/repository/org/hibernate/common/hibernate-commons-annotations/5.1.0.Final/hibernate-commons-annotations-5.1.0.Final.jar:/Users/ivohristov/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jaxb-runtime-2.3.2.jar:/Users/ivohristov/.m2/repository/org/glassfish/jaxb/txw2/2.3.2/txw2-2.3.2.jar:/Users/ivohristov/.m2/repository/com/sun/istack/istack-commons-runtime/3.0.8/istack-commons-runtime-3.0.8.jar:/Users/ivohristov/.m2/repository/org/jvnet/staxex/stax-ex/1.8.1/stax-ex-1.8.1.jar:/Users/ivohristov/.m2/repository/com/sun/xml/fastinfoset/FastInfoset/1.2.16/FastInfoset-1.2.16.jar:/Users/ivohristov/.m2/repository/org/springframework/data/spring-data-jpa/2.2.1.RELEASE/spring-data-jpa-2.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/org/springframework/data/spring-data-commons/2.2.1.RELEASE/spring-data-commons-2.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/org/springframework/spring-orm/5.2.1.RELEASE/spring-orm-5.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/org/springframework/spring-context/5.2.1.RELEASE/spring-context-5.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/org/springframework/spring-tx/5.2.1.RELEASE/spring-tx-5.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/org/springframework/spring-beans/5.2.1.RELEASE/spring-beans-5.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/org/slf4j/slf4j-api/1.7.29/slf4j-api-1.7.29.jar:/Users/ivohristov/.m2/repository/org/springframework/spring-aspects/5.2.1.RELEASE/spring-aspects-5.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/org/springframework/boot/spring-boot-starter-web/2.2.1.RELEASE/spring-boot-starter-web-2.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/org/springframework/boot/spring-boot-starter/2.2.1.RELEASE/spring-boot-starter-2.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/org/springframework/boot/spring-boot/2.2.1.RELEASE/spring-boot-2.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/2.2.1.RELEASE/spring-boot-autoconfigure-2.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/org/springframework/boot/spring-boot-starter-logging/2.2.1.RELEASE/spring-boot-starter-logging-2.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar:/Users/ivohristov/.m2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar:/Users/ivohristov/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.12.1/log4j-to-slf4j-2.12.1.jar:/Users/ivohristov/.m2/repository/org/apache/logging/log4j/log4j-api/2.12.1/log4j-api-2.12.1.jar:/Users/ivohristov/.m2/repository/org/slf4j/jul-to-slf4j/1.7.29/jul-to-slf4j-1.7.29.jar:/Users/ivohristov/.m2/repository/jakarta/annotation/jakarta.annotation-api/1.3.5/jakarta.annotation-api-1.3.5.jar:/Users/ivohristov/.m2/repository/org/yaml/snakeyaml/1.25/snakeyaml-1.25.jar:/Users/ivohristov/.m2/repository/org/springframework/boot/spring-boot-starter-json/2.2.1.RELEASE/spring-boot-starter-json-2.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.10.0/jackson-databind-2.10.0.jar:/Users/ivohristov/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.10.0/jackson-annotations-2.10.0.jar:/Users/ivohristov/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.10.0/jackson-core-2.10.0.jar:/Users/ivohristov/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.10.0/jackson-datatype-jdk8-2.10.0.jar:/Users/ivohristov/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.10.0/jackson-datatype-jsr310-2.10.0.jar:/Users/ivohristov/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.10.0/jackson-module-parameter-names-2.10.0.jar:/Users/ivohristov/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/2.2.1.RELEASE/spring-boot-starter-tomcat-2.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.27/tomcat-embed-core-9.0.27.jar:/Users/ivohristov/.m2/repository/org/apache/tomcat/embed/tomcat-embed-el/9.0.27/tomcat-embed-el-9.0.27.jar:/Users/ivohristov/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/9.0.27/tomcat-embed-websocket-9.0.27.jar:/Users/ivohristov/.m2/repository/org/springframework/boot/spring-boot-starter-validation/2.2.1.RELEASE/spring-boot-starter-validation-2.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/jakarta/validation/jakarta.validation-api/2.0.1/jakarta.validation-api-2.0.1.jar:/Users/ivohristov/.m2/repository/org/hibernate/validator/hibernate-validator/6.0.18.Final/hibernate-validator-6.0.18.Final.jar:/Users/ivohristov/.m2/repository/org/springframework/spring-web/5.2.1.RELEASE/spring-web-5.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/org/springframework/spring-webmvc/5.2.1.RELEASE/spring-webmvc-5.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/org/springframework/spring-expression/5.2.1.RELEASE/spring-expression-5.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/org/springframework/boot/spring-boot-starter-test/2.2.1.RELEASE/spring-boot-starter-test-2.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/org/springframework/boot/spring-boot-test/2.2.1.RELEASE/spring-boot-test-2.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/org/springframework/boot/spring-boot-test-autoconfigure/2.2.1.RELEASE/spring-boot-test-autoconfigure-2.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/com/jayway/jsonpath/json-path/2.4.0/json-path-2.4.0.jar:/Users/ivohristov/.m2/repository/net/minidev/json-smart/2.3/json-smart-2.3.jar:/Users/ivohristov/.m2/repository/net/minidev/accessors-smart/1.2/accessors-smart-1.2.jar:/Users/ivohristov/.m2/repository/org/ow2/asm/asm/5.0.4/asm-5.0.4.jar:/Users/ivohristov/.m2/repository/jakarta/xml/bind/jakarta.xml.bind-api/2.3.2/jakarta.xml.bind-api-2.3.2.jar:/Users/ivohristov/.m2/repository/org/junit/jupiter/junit-jupiter/5.5.2/junit-jupiter-5.5.2.jar:/Users/ivohristov/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.5.2/junit-jupiter-api-5.5.2.jar:/Users/ivohristov/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/Users/ivohristov/.m2/repository/org/junit/platform/junit-platform-commons/1.5.2/junit-platform-commons-1.5.2.jar:/Users/ivohristov/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.5.2/junit-jupiter-params-5.5.2.jar:/Users/ivohristov/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.5.2/junit-jupiter-engine-5.5.2.jar:/Users/ivohristov/.m2/repository/org/junit/vintage/junit-vintage-engine/5.5.2/junit-vintage-engine-5.5.2.jar:/Users/ivohristov/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/Users/ivohristov/.m2/repository/org/junit/platform/junit-platform-engine/1.5.2/junit-platform-engine-1.5.2.jar:/Users/ivohristov/.m2/repository/junit/junit/4.12/junit-4.12.jar:/Users/ivohristov/.m2/repository/org/mockito/mockito-junit-jupiter/3.1.0/mockito-junit-jupiter-3.1.0.jar:/Users/ivohristov/.m2/repository/org/assertj/assertj-core/3.13.2/assertj-core-3.13.2.jar:/Users/ivohristov/.m2/repository/org/hamcrest/hamcrest/2.1/hamcrest-2.1.jar:/Users/ivohristov/.m2/repository/org/mockito/mockito-core/3.1.0/mockito-core-3.1.0.jar:/Users/ivohristov/.m2/repository/net/bytebuddy/byte-buddy-agent/1.10.2/byte-buddy-agent-1.10.2.jar:/Users/ivohristov/.m2/repository/org/objenesis/objenesis/2.6/objenesis-2.6.jar:/Users/ivohristov/.m2/repository/org/skyscreamer/jsonassert/1.5.0/jsonassert-1.5.0.jar:/Users/ivohristov/.m2/repository/com/vaadin/external/google/android-json/0.0.20131108.vaadin1/android-json-0.0.20131108.vaadin1.jar:/Users/ivohristov/.m2/repository/org/springframework/spring-core/5.2.1.RELEASE/spring-core-5.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/org/springframework/spring-jcl/5.2.1.RELEASE/spring-jcl-5.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/org/springframework/spring-test/5.2.1.RELEASE/spring-test-5.2.1.RELEASE.jar:/Users/ivohristov/.m2/repository/org/xmlunit/xmlunit-core/2.6.3/xmlunit-core-2.6.3.jar:/Users/ivohristov/.m2/repository/org/projectlombok/lombok/1.18.10/lombok-1.18.10.jar:/Users/ivohristov/.m2/repository/com/h2database/h2/1.4.200/h2-1.4.200.jar:/Users/ivohristov/.m2/repository/org/mapstruct/mapstruct/1.5.2.Final/mapstruct-1.5.2.Final.jar:/Users/ivohristov/.m2/repository/org/mapstruct/mapstruct-processor/1.5.2.Final/mapstruct-processor-1.5.2.Final.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/Users/ivohristov"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2022-07-19"/>
+    <property name="java.home" value="/Library/Java/JavaVirtualMachines/amazon-corretto-11.jdk/Contents/Home"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/Users/ivohristov/Projects/WeatherTestApi"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.CGraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="/Users/ivohristov/Projects/WeatherTestApi/target/surefire/surefirebooter16807483832154180952.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+    <property name="java.runtime.version" value="11.0.16+8-LTS"/>
+    <property name="user.name" value="ivohristov"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="12.4"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="java.vendor.version" value="Corretto-11.0.16.8.3"/>
+    <property name="localRepository" value="/Users/ivohristov/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/corretto/corretto-11/issues/"/>
+    <property name="java.io.tmpdir" value="/var/folders/dn/w4jysqnx1jzc681pp99jcjr00000gn/T/"/>
+    <property name="java.version" value="11.0.16"/>
+    <property name="user.dir" value="/Users/ivohristov/Projects/WeatherTestApi"/>
+    <property name="os.arch" value="x86_64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.lwawt.macosx.CPrinterJob"/>
+    <property name="sun.os.patch.level" value="unknown"/>
+    <property name="java.library.path" value="/Users/ivohristov/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Amazon.com Inc."/>
+    <property name="java.vm.version" value="11.0.16+8-LTS"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeBig"/>
+    <property name="java.class.version" value="55.0"/>
+    <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
+  </properties>
+  <testcase name="testWeatherEndpointWithPOST" classname="com.hackerrank.weather.WeatherApiRestControllerTest" time="1.532">
+    <failure message="No value at JSON path &quot;$.id&quot;" type="java.lang.AssertionError">java.lang.AssertionError: No value at JSON path "$.id"
+	at com.hackerrank.weather.WeatherApiRestControllerTest.testWeatherEndpointWithPOST(WeatherApiRestControllerTest.java:57)
+Caused by: java.lang.IllegalArgumentException: json can not be null or empty
+	at com.hackerrank.weather.WeatherApiRestControllerTest.testWeatherEndpointWithPOST(WeatherApiRestControllerTest.java:57)
+</failure>
+    <system-out><![CDATA[10:56:11.591 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.hackerrank.weather.WeatherApiRestControllerTest]
+10:56:11.598 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+10:56:11.605 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+10:56:11.673 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.hackerrank.weather.WeatherApiRestControllerTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+10:56:11.691 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.hackerrank.weather.WeatherApiRestControllerTest], using SpringBootContextLoader
+10:56:11.699 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.hackerrank.weather.WeatherApiRestControllerTest]: class path resource [com/hackerrank/weather/WeatherApiRestControllerTest-context.xml] does not exist
+10:56:11.701 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.hackerrank.weather.WeatherApiRestControllerTest]: class path resource [com/hackerrank/weather/WeatherApiRestControllerTestContext.groovy] does not exist
+10:56:11.702 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.hackerrank.weather.WeatherApiRestControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+10:56:11.702 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.hackerrank.weather.WeatherApiRestControllerTest]: WeatherApiRestControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+10:56:11.768 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.hackerrank.weather.WeatherApiRestControllerTest]
+10:56:11.839 [main] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/ivohristov/Projects/WeatherTestApi/target/classes/com/hackerrank/weather/Application.class]
+10:56:11.840 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.hackerrank.weather.Application for test class com.hackerrank.weather.WeatherApiRestControllerTest
+10:56:11.990 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.hackerrank.weather.WeatherApiRestControllerTest]: using defaults.
+10:56:11.991 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+10:56:12.002 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4df5bcb4, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@12c7a01b, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@13d9b21f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2826f61, org.springframework.test.context.support.DirtiesContextTestExecutionListener@62727399, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4d9ac0b4, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@130dca52, org.springframework.test.context.event.EventPublishingTestExecutionListener@2654635, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@737a135b, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@687ef2e0, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@15dcfae7, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3da05287, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1e636ea3]
+10:56:12.007 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.hackerrank.weather.WeatherApiRestControllerTest]
+10:56:12.008 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.hackerrank.weather.WeatherApiRestControllerTest]
+10:56:12.048 [main] DEBUG org.springframework.test.context.junit4.SpringJUnit4ClassRunner - SpringJUnit4ClassRunner constructor called with [class com.hackerrank.weather.WeatherApiRestControllerTest]
+10:56:12.049 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+10:56:12.049 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+10:56:12.050 [main] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.hackerrank.weather.WeatherApiRestControllerTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+10:56:12.050 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.hackerrank.weather.WeatherApiRestControllerTest], using SpringBootContextLoader
+10:56:12.051 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.hackerrank.weather.WeatherApiRestControllerTest]: class path resource [com/hackerrank/weather/WeatherApiRestControllerTest-context.xml] does not exist
+10:56:12.052 [main] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.hackerrank.weather.WeatherApiRestControllerTest]: class path resource [com/hackerrank/weather/WeatherApiRestControllerTestContext.groovy] does not exist
+10:56:12.052 [main] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.hackerrank.weather.WeatherApiRestControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+10:56:12.052 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.hackerrank.weather.WeatherApiRestControllerTest]: WeatherApiRestControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+10:56:12.059 [main] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.hackerrank.weather.WeatherApiRestControllerTest]
+10:56:12.060 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.hackerrank.weather.Application for test class com.hackerrank.weather.WeatherApiRestControllerTest
+10:56:12.065 [main] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.hackerrank.weather.WeatherApiRestControllerTest]: using defaults.
+10:56:12.066 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+10:56:12.066 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3243b914, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@241e8ea6, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@542e560f, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@626c44e7, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4dc8caa7, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1d730606, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3bcbb589, org.springframework.test.context.event.EventPublishingTestExecutionListener@3b00856b, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3016fd5e, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@35d08e6c, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@53d102a2, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6c45ee6e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6b3e12b5]
+10:56:12.067 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.hackerrank.weather.WeatherApiRestControllerTest]
+10:56:12.067 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.hackerrank.weather.WeatherApiRestControllerTest]
+10:56:12.153 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.hackerrank.weather.WeatherApiRestControllerTest]
+10:56:12.154 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.hackerrank.weather.WeatherApiRestControllerTest]
+10:56:12.166 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.hackerrank.weather.WeatherApiRestControllerTest]
+10:56:12.166 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.hackerrank.weather.WeatherApiRestControllerTest]
+10:56:12.167 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.hackerrank.weather.WeatherApiRestControllerTest]
+10:56:12.167 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.hackerrank.weather.WeatherApiRestControllerTest]
+10:56:12.173 [main] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@3eeb318f testClass = WeatherApiRestControllerTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@20a14b55 testClass = WeatherApiRestControllerTest, locations = '{}', classes = '{class com.hackerrank.weather.Application}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[[ImportsContextCustomizer@39ad977d key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@491b9b8, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@aba625, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@126253fd, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@41330d4f], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [true] with mode [BEFORE_EACH_TEST_METHOD].
+10:56:12.176 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved @ProfileValueSourceConfiguration [null] for test class [com.hackerrank.weather.WeatherApiRestControllerTest]
+10:56:12.176 [main] DEBUG org.springframework.test.annotation.ProfileValueUtils - Retrieved ProfileValueSource type [class org.springframework.test.annotation.SystemProfileValueSource] for class [com.hackerrank.weather.WeatherApiRestControllerTest]
+10:56:12.358 [main] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true, server.port=-1}
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.1.RELEASE)
+
+2022-08-09 10:56:12.923  INFO 65166 --- [           main] c.h.w.WeatherApiRestControllerTest       : Starting WeatherApiRestControllerTest on ihristov-MB with PID 65166 (started by ivohristov in /Users/ivohristov/Projects/WeatherTestApi)
+2022-08-09 10:56:12.927  INFO 65166 --- [           main] c.h.w.WeatherApiRestControllerTest       : No active profile set, falling back to default profiles: default
+2022-08-09 10:56:13.880  INFO 65166 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-08-09 10:56:14.010  INFO 65166 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 123ms. Found 1 repository interfaces.
+2022-08-09 10:56:14.657  INFO 65166 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-08-09 10:56:14.973  INFO 65166 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-08-09 10:56:15.156  INFO 65166 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-08-09 10:56:15.255  INFO 65166 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-09 10:56:15.331  INFO 65166 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.8.Final}
+2022-08-09 10:56:15.459  INFO 65166 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2022-08-09 10:56:15.561  INFO 65166 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Hibernate: drop table weather if exists
+Hibernate: drop table weather_temperatures if exists
+Hibernate: create table weather (id integer generated by default as identity, city varchar(255), date date, lat float, lon float, state varchar(255), primary key (id))
+Hibernate: create table weather_temperatures (weather_id integer not null, temperatures double)
+Hibernate: alter table weather_temperatures add constraint FKr6t1tvrqfp9248r4gljvdsdaj foreign key (weather_id) references weather
+2022-08-09 10:56:16.217  INFO 65166 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-09 10:56:16.223  INFO 65166 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-09 10:56:17.332  WARN 65166 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-09 10:56:17.511  INFO 65166 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-09 10:56:17.909  INFO 65166 --- [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:weather_db'
+2022-08-09 10:56:17.999  INFO 65166 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2022-08-09 10:56:17.999  INFO 65166 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-08-09 10:56:18.013  INFO 65166 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 14 ms
+2022-08-09 10:56:18.042  INFO 65166 --- [           main] c.h.w.WeatherApiRestControllerTest       : Started WeatherApiRestControllerTest in 5.676 seconds (JVM running for 7.482)
+2022-08-09 10:56:18.075  INFO 65166 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-09 10:56:18.076  INFO 65166 --- [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-09 10:56:18.077  INFO 65166 --- [           main] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+Hibernate: drop table weather if exists
+2022-08-09 10:56:18.080 ERROR 65166 --- [           main] .SchemaDropperImpl$DelayedDropActionImpl : HHH000478: Unsuccessful: drop table weather if exists
+Hibernate: drop table weather_temperatures if exists
+2022-08-09 10:56:18.085  INFO 65166 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-08-09 10:56:18.094  INFO 65166 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.1.RELEASE)
+
+2022-08-09 10:56:18.145  INFO 65166 --- [           main] c.h.w.WeatherApiRestControllerTest       : Starting WeatherApiRestControllerTest on ihristov-MB with PID 65166 (started by ivohristov in /Users/ivohristov/Projects/WeatherTestApi)
+2022-08-09 10:56:18.145  INFO 65166 --- [           main] c.h.w.WeatherApiRestControllerTest       : No active profile set, falling back to default profiles: default
+2022-08-09 10:56:18.412  INFO 65166 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-08-09 10:56:18.435  INFO 65166 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21ms. Found 1 repository interfaces.
+2022-08-09 10:56:18.531  INFO 65166 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-08-09 10:56:18.657  INFO 65166 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2022-08-09 10:56:18.664  INFO 65166 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2022-08-09 10:56:18.677  INFO 65166 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-09 10:56:18.686  INFO 65166 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Hibernate: drop table weather if exists
+Hibernate: drop table weather_temperatures if exists
+Hibernate: create table weather (id integer generated by default as identity, city varchar(255), date date, lat float, lon float, state varchar(255), primary key (id))
+Hibernate: create table weather_temperatures (weather_id integer not null, temperatures double)
+Hibernate: alter table weather_temperatures add constraint FKr6t1tvrqfp9248r4gljvdsdaj foreign key (weather_id) references weather
+2022-08-09 10:56:18.788  INFO 65166 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-09 10:56:18.788  INFO 65166 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-09 10:56:19.034  WARN 65166 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-09 10:56:19.092  INFO 65166 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-09 10:56:19.247  INFO 65166 --- [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:weather_db'
+2022-08-09 10:56:19.295  INFO 65166 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2022-08-09 10:56:19.296  INFO 65166 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-08-09 10:56:19.305  INFO 65166 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 7 ms
+2022-08-09 10:56:19.320  INFO 65166 --- [           main] c.h.w.WeatherApiRestControllerTest       : Started WeatherApiRestControllerTest in 1.217 seconds (JVM running for 8.759)
+Hibernate: select weather0_.id as id1_0_, weather0_.city as city2_0_, weather0_.date as date3_0_, weather0_.lat as lat4_0_, weather0_.lon as lon5_0_, weather0_.state as state6_0_ from weather weather0_
+2022-08-09 10:56:19.564  WARN 65166 --- [           main] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unrecognized field "id" (class com.hackerrank.weather.resource.WeatherRequest), not marked as ignorable; nested exception is com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "id" (class com.hackerrank.weather.resource.WeatherRequest), not marked as ignorable (6 known properties: "state", "lon", "date", "lat", "city", "temperatures"])
+ at [Source: (PushbackInputStream); line: 1, column: 8] (through reference chain: com.hackerrank.weather.resource.WeatherRequest["id"])]
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /weather
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8"]
+             Body = {"id":1,"date":"2019-06-10","lat":41.8818,"lon":-87.6231,"city":"Chicago","state":"Illinois","temperatures":[24.0,21.5,24.0,19.5,25.5,25.5,24.0,25.0,23.0,22.0,18.0,18.0,23.5,23.0,23.0,25.5,21.0,20.5,20.0,18.5,20.5,21.0,25.0,20.5]}
+    Session Attrs = {}
+
+Handler:
+             Type = com.hackerrank.weather.controller.WeatherApiRestController
+           Method = com.hackerrank.weather.controller.WeatherApiRestController#submitWeatherRecord(WeatherRequest)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.http.converter.HttpMessageNotReadableException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = []
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /weather
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8"]
+             Body = {"id":1,"date":"2019-06-10","lat":41.8818,"lon":-87.6231,"city":"Chicago","state":"Illinois","temperatures":[24.0,21.5,24.0,19.5,25.5,25.5,24.0,25.0,23.0,22.0,18.0,18.0,23.5,23.0,23.0,25.5,21.0,20.5,20.0,18.5,20.5,21.0,25.0,20.5]}
+    Session Attrs = {}
+
+Handler:
+             Type = com.hackerrank.weather.controller.WeatherApiRestController
+           Method = com.hackerrank.weather.controller.WeatherApiRestController#submitWeatherRecord(WeatherRequest)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.http.converter.HttpMessageNotReadableException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = []
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+]]></system-out>
+  </testcase>
+  <testcase name="testWeatherEndpointWithGETListAndCityFilter" classname="com.hackerrank.weather.WeatherApiRestControllerTest" time="0.966">
+    <failure message="Status expected:&lt;201&gt; but was:&lt;400&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Status expected:<201> but was:<400>
+	at com.hackerrank.weather.WeatherApiRestControllerTest.testWeatherEndpointWithGETListAndCityFilter(WeatherApiRestControllerTest.java:136)
+]]></failure>
+    <system-out><![CDATA[2022-08-09 10:56:19.607  INFO 65166 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-09 10:56:19.608  INFO 65166 --- [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-09 10:56:19.609  INFO 65166 --- [           main] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+Hibernate: drop table weather if exists
+2022-08-09 10:56:19.610 ERROR 65166 --- [           main] .SchemaDropperImpl$DelayedDropActionImpl : HHH000478: Unsuccessful: drop table weather if exists
+Hibernate: drop table weather_temperatures if exists
+2022-08-09 10:56:19.612  INFO 65166 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2022-08-09 10:56:19.618  INFO 65166 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.1.RELEASE)
+
+2022-08-09 10:56:19.651  INFO 65166 --- [           main] c.h.w.WeatherApiRestControllerTest       : Starting WeatherApiRestControllerTest on ihristov-MB with PID 65166 (started by ivohristov in /Users/ivohristov/Projects/WeatherTestApi)
+2022-08-09 10:56:19.651  INFO 65166 --- [           main] c.h.w.WeatherApiRestControllerTest       : No active profile set, falling back to default profiles: default
+2022-08-09 10:56:19.841  INFO 65166 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-08-09 10:56:19.859  INFO 65166 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 17ms. Found 1 repository interfaces.
+2022-08-09 10:56:19.932  INFO 65166 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-08-09 10:56:19.992  INFO 65166 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2022-08-09 10:56:19.994  INFO 65166 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2022-08-09 10:56:20.002  INFO 65166 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-09 10:56:20.007  INFO 65166 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Hibernate: drop table weather if exists
+Hibernate: drop table weather_temperatures if exists
+Hibernate: create table weather (id integer generated by default as identity, city varchar(255), date date, lat float, lon float, state varchar(255), primary key (id))
+Hibernate: create table weather_temperatures (weather_id integer not null, temperatures double)
+Hibernate: alter table weather_temperatures add constraint FKr6t1tvrqfp9248r4gljvdsdaj foreign key (weather_id) references weather
+2022-08-09 10:56:20.074  INFO 65166 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-09 10:56:20.074  INFO 65166 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-09 10:56:20.308  WARN 65166 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-09 10:56:20.367  INFO 65166 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-09 10:56:20.483  INFO 65166 --- [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:weather_db'
+2022-08-09 10:56:20.519  INFO 65166 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2022-08-09 10:56:20.519  INFO 65166 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-08-09 10:56:20.523  INFO 65166 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 4 ms
+2022-08-09 10:56:20.532  INFO 65166 --- [           main] c.h.w.WeatherApiRestControllerTest       : Started WeatherApiRestControllerTest in 0.909 seconds (JVM running for 9.971)
+Hibernate: select weather0_.id as id1_0_, weather0_.city as city2_0_, weather0_.date as date3_0_, weather0_.lat as lat4_0_, weather0_.lon as lon5_0_, weather0_.state as state6_0_ from weather weather0_
+2022-08-09 10:56:20.556  WARN 65166 --- [           main] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unrecognized field "id" (class com.hackerrank.weather.resource.WeatherRequest), not marked as ignorable; nested exception is com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "id" (class com.hackerrank.weather.resource.WeatherRequest), not marked as ignorable (6 known properties: "state", "lon", "date", "lat", "city", "temperatures"])
+ at [Source: (PushbackInputStream); line: 1, column: 8] (through reference chain: com.hackerrank.weather.resource.WeatherRequest["id"])]
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /weather
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8"]
+             Body = {"id":1,"date":"2019-06-10","lat":41.8818,"lon":-87.6231,"city":"Chicago","state":"Illinois","temperatures":[24.0,21.5,24.0,19.5,25.5,25.5,24.0,25.0,23.0,22.0,18.0,18.0,23.5,23.0,23.0,25.5,21.0,20.5,20.0,18.5,20.5,21.0,25.0,20.5]}
+    Session Attrs = {}
+
+Handler:
+             Type = com.hackerrank.weather.controller.WeatherApiRestController
+           Method = com.hackerrank.weather.controller.WeatherApiRestController#submitWeatherRecord(WeatherRequest)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.http.converter.HttpMessageNotReadableException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = []
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /weather
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8"]
+             Body = {"id":1,"date":"2019-06-10","lat":41.8818,"lon":-87.6231,"city":"Chicago","state":"Illinois","temperatures":[24.0,21.5,24.0,19.5,25.5,25.5,24.0,25.0,23.0,22.0,18.0,18.0,23.5,23.0,23.0,25.5,21.0,20.5,20.0,18.5,20.5,21.0,25.0,20.5]}
+    Session Attrs = {}
+
+Handler:
+             Type = com.hackerrank.weather.controller.WeatherApiRestController
+           Method = com.hackerrank.weather.controller.WeatherApiRestController#submitWeatherRecord(WeatherRequest)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.http.converter.HttpMessageNotReadableException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = []
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+]]></system-out>
+  </testcase>
+  <testcase name="testWeatherEndpointWithGETListAndDateFilter" classname="com.hackerrank.weather.WeatherApiRestControllerTest" time="0.838">
+    <failure message="Status expected:&lt;201&gt; but was:&lt;400&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Status expected:<201> but was:<400>
+	at com.hackerrank.weather.WeatherApiRestControllerTest.testWeatherEndpointWithGETListAndDateFilter(WeatherApiRestControllerTest.java:104)
+]]></failure>
+    <system-out><![CDATA[2022-08-09 10:56:20.575  INFO 65166 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-09 10:56:20.575  INFO 65166 --- [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-09 10:56:20.575  INFO 65166 --- [           main] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+Hibernate: drop table weather if exists
+2022-08-09 10:56:20.576 ERROR 65166 --- [           main] .SchemaDropperImpl$DelayedDropActionImpl : HHH000478: Unsuccessful: drop table weather if exists
+Hibernate: drop table weather_temperatures if exists
+2022-08-09 10:56:20.577  INFO 65166 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2022-08-09 10:56:20.584  INFO 65166 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.1.RELEASE)
+
+2022-08-09 10:56:20.612  INFO 65166 --- [           main] c.h.w.WeatherApiRestControllerTest       : Starting WeatherApiRestControllerTest on ihristov-MB with PID 65166 (started by ivohristov in /Users/ivohristov/Projects/WeatherTestApi)
+2022-08-09 10:56:20.613  INFO 65166 --- [           main] c.h.w.WeatherApiRestControllerTest       : No active profile set, falling back to default profiles: default
+2022-08-09 10:56:20.771  INFO 65166 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-08-09 10:56:20.782  INFO 65166 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10ms. Found 1 repository interfaces.
+2022-08-09 10:56:20.865  INFO 65166 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-08-09 10:56:20.922  INFO 65166 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Starting...
+2022-08-09 10:56:20.929  INFO 65166 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Start completed.
+2022-08-09 10:56:20.941  INFO 65166 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-09 10:56:20.950  INFO 65166 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Hibernate: drop table weather if exists
+Hibernate: drop table weather_temperatures if exists
+Hibernate: create table weather (id integer generated by default as identity, city varchar(255), date date, lat float, lon float, state varchar(255), primary key (id))
+Hibernate: create table weather_temperatures (weather_id integer not null, temperatures double)
+Hibernate: alter table weather_temperatures add constraint FKr6t1tvrqfp9248r4gljvdsdaj foreign key (weather_id) references weather
+2022-08-09 10:56:21.024  INFO 65166 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-09 10:56:21.024  INFO 65166 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-09 10:56:21.159  WARN 65166 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-09 10:56:21.207  INFO 65166 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-09 10:56:21.311  INFO 65166 --- [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:weather_db'
+2022-08-09 10:56:21.378  INFO 65166 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2022-08-09 10:56:21.379  INFO 65166 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-08-09 10:56:21.383  INFO 65166 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 4 ms
+2022-08-09 10:56:21.390  INFO 65166 --- [           main] c.h.w.WeatherApiRestControllerTest       : Started WeatherApiRestControllerTest in 0.803 seconds (JVM running for 10.83)
+Hibernate: select weather0_.id as id1_0_, weather0_.city as city2_0_, weather0_.date as date3_0_, weather0_.lat as lat4_0_, weather0_.lon as lon5_0_, weather0_.state as state6_0_ from weather weather0_
+2022-08-09 10:56:21.405  WARN 65166 --- [           main] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unrecognized field "id" (class com.hackerrank.weather.resource.WeatherRequest), not marked as ignorable; nested exception is com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "id" (class com.hackerrank.weather.resource.WeatherRequest), not marked as ignorable (6 known properties: "state", "lon", "date", "lat", "city", "temperatures"])
+ at [Source: (PushbackInputStream); line: 1, column: 8] (through reference chain: com.hackerrank.weather.resource.WeatherRequest["id"])]
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /weather
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8"]
+             Body = {"id":1,"date":"2019-06-10","lat":41.8818,"lon":-87.6231,"city":"Chicago","state":"Illinois","temperatures":[24.0,21.5,24.0,19.5,25.5,25.5,24.0,25.0,23.0,22.0,18.0,18.0,23.5,23.0,23.0,25.5,21.0,20.5,20.0,18.5,20.5,21.0,25.0,20.5]}
+    Session Attrs = {}
+
+Handler:
+             Type = com.hackerrank.weather.controller.WeatherApiRestController
+           Method = com.hackerrank.weather.controller.WeatherApiRestController#submitWeatherRecord(WeatherRequest)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.http.converter.HttpMessageNotReadableException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = []
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /weather
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8"]
+             Body = {"id":1,"date":"2019-06-10","lat":41.8818,"lon":-87.6231,"city":"Chicago","state":"Illinois","temperatures":[24.0,21.5,24.0,19.5,25.5,25.5,24.0,25.0,23.0,22.0,18.0,18.0,23.5,23.0,23.0,25.5,21.0,20.5,20.0,18.5,20.5,21.0,25.0,20.5]}
+    Session Attrs = {}
+
+Handler:
+             Type = com.hackerrank.weather.controller.WeatherApiRestController
+           Method = com.hackerrank.weather.controller.WeatherApiRestController#submitWeatherRecord(WeatherRequest)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.http.converter.HttpMessageNotReadableException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = []
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+]]></system-out>
+  </testcase>
+  <testcase name="testWeatherEndpointWithGETById" classname="com.hackerrank.weather.WeatherApiRestControllerTest" time="0.723">
+    <failure message="Status expected:&lt;201&gt; but was:&lt;400&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Status expected:<201> but was:<400>
+	at com.hackerrank.weather.WeatherApiRestControllerTest.testWeatherEndpointWithGETById(WeatherApiRestControllerTest.java:219)
+]]></failure>
+    <system-out><![CDATA[2022-08-09 10:56:21.412  INFO 65166 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-09 10:56:21.413  INFO 65166 --- [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-09 10:56:21.414  INFO 65166 --- [           main] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+Hibernate: drop table weather if exists
+2022-08-09 10:56:21.414 ERROR 65166 --- [           main] .SchemaDropperImpl$DelayedDropActionImpl : HHH000478: Unsuccessful: drop table weather if exists
+Hibernate: drop table weather_temperatures if exists
+2022-08-09 10:56:21.419  INFO 65166 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2022-08-09 10:56:21.424  INFO 65166 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.1.RELEASE)
+
+2022-08-09 10:56:21.455  INFO 65166 --- [           main] c.h.w.WeatherApiRestControllerTest       : Starting WeatherApiRestControllerTest on ihristov-MB with PID 65166 (started by ivohristov in /Users/ivohristov/Projects/WeatherTestApi)
+2022-08-09 10:56:21.456  INFO 65166 --- [           main] c.h.w.WeatherApiRestControllerTest       : No active profile set, falling back to default profiles: default
+2022-08-09 10:56:21.607  INFO 65166 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-08-09 10:56:21.618  INFO 65166 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11ms. Found 1 repository interfaces.
+2022-08-09 10:56:21.669  INFO 65166 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-08-09 10:56:21.712  INFO 65166 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2022-08-09 10:56:21.717  INFO 65166 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2022-08-09 10:56:21.727  INFO 65166 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-09 10:56:21.733  INFO 65166 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Hibernate: drop table weather if exists
+Hibernate: drop table weather_temperatures if exists
+Hibernate: create table weather (id integer generated by default as identity, city varchar(255), date date, lat float, lon float, state varchar(255), primary key (id))
+Hibernate: create table weather_temperatures (weather_id integer not null, temperatures double)
+Hibernate: alter table weather_temperatures add constraint FKr6t1tvrqfp9248r4gljvdsdaj foreign key (weather_id) references weather
+2022-08-09 10:56:21.808  INFO 65166 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-09 10:56:21.808  INFO 65166 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-09 10:56:21.957  WARN 65166 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-09 10:56:21.994  INFO 65166 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-09 10:56:22.077  INFO 65166 --- [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:weather_db'
+2022-08-09 10:56:22.104  INFO 65166 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2022-08-09 10:56:22.104  INFO 65166 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-08-09 10:56:22.107  INFO 65166 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2022-08-09 10:56:22.113  INFO 65166 --- [           main] c.h.w.WeatherApiRestControllerTest       : Started WeatherApiRestControllerTest in 0.684 seconds (JVM running for 11.552)
+Hibernate: select weather0_.id as id1_0_, weather0_.city as city2_0_, weather0_.date as date3_0_, weather0_.lat as lat4_0_, weather0_.lon as lon5_0_, weather0_.state as state6_0_ from weather weather0_
+2022-08-09 10:56:22.129  WARN 65166 --- [           main] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unrecognized field "id" (class com.hackerrank.weather.resource.WeatherRequest), not marked as ignorable; nested exception is com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "id" (class com.hackerrank.weather.resource.WeatherRequest), not marked as ignorable (6 known properties: "state", "lon", "date", "lat", "city", "temperatures"])
+ at [Source: (PushbackInputStream); line: 1, column: 8] (through reference chain: com.hackerrank.weather.resource.WeatherRequest["id"])]
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /weather
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8"]
+             Body = {"id":1,"date":"2019-06-10","lat":41.8818,"lon":-87.6231,"city":"Chicago","state":"Illinois","temperatures":[24.0,21.5,24.0,19.5,25.5,25.5,24.0,25.0,23.0,22.0,18.0,18.0,23.5,23.0,23.0,25.5,21.0,20.5,20.0,18.5,20.5,21.0,25.0,20.5]}
+    Session Attrs = {}
+
+Handler:
+             Type = com.hackerrank.weather.controller.WeatherApiRestController
+           Method = com.hackerrank.weather.controller.WeatherApiRestController#submitWeatherRecord(WeatherRequest)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.http.converter.HttpMessageNotReadableException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = []
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /weather
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8"]
+             Body = {"id":1,"date":"2019-06-10","lat":41.8818,"lon":-87.6231,"city":"Chicago","state":"Illinois","temperatures":[24.0,21.5,24.0,19.5,25.5,25.5,24.0,25.0,23.0,22.0,18.0,18.0,23.5,23.0,23.0,25.5,21.0,20.5,20.0,18.5,20.5,21.0,25.0,20.5]}
+    Session Attrs = {}
+
+Handler:
+             Type = com.hackerrank.weather.controller.WeatherApiRestController
+           Method = com.hackerrank.weather.controller.WeatherApiRestController#submitWeatherRecord(WeatherRequest)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.http.converter.HttpMessageNotReadableException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = []
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+]]></system-out>
+  </testcase>
+  <testcase name="testWeatherEndpointWithGETList" classname="com.hackerrank.weather.WeatherApiRestControllerTest" time="0.699">
+    <failure message="Status expected:&lt;201&gt; but was:&lt;400&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Status expected:<201> but was:<400>
+	at com.hackerrank.weather.WeatherApiRestControllerTest.testWeatherEndpointWithGETList(WeatherApiRestControllerTest.java:75)
+]]></failure>
+    <system-out><![CDATA[2022-08-09 10:56:22.133  INFO 65166 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-09 10:56:22.136  INFO 65166 --- [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-09 10:56:22.139  INFO 65166 --- [           main] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+Hibernate: drop table weather if exists
+2022-08-09 10:56:22.140 ERROR 65166 --- [           main] .SchemaDropperImpl$DelayedDropActionImpl : HHH000478: Unsuccessful: drop table weather if exists
+Hibernate: drop table weather_temperatures if exists
+2022-08-09 10:56:22.142  INFO 65166 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2022-08-09 10:56:22.145  INFO 65166 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.1.RELEASE)
+
+2022-08-09 10:56:22.171  INFO 65166 --- [           main] c.h.w.WeatherApiRestControllerTest       : Starting WeatherApiRestControllerTest on ihristov-MB with PID 65166 (started by ivohristov in /Users/ivohristov/Projects/WeatherTestApi)
+2022-08-09 10:56:22.171  INFO 65166 --- [           main] c.h.w.WeatherApiRestControllerTest       : No active profile set, falling back to default profiles: default
+2022-08-09 10:56:22.312  INFO 65166 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-08-09 10:56:22.323  INFO 65166 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11ms. Found 1 repository interfaces.
+2022-08-09 10:56:22.363  INFO 65166 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-08-09 10:56:22.393  INFO 65166 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2022-08-09 10:56:22.396  INFO 65166 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2022-08-09 10:56:22.403  INFO 65166 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-09 10:56:22.412  INFO 65166 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Hibernate: drop table weather if exists
+Hibernate: drop table weather_temperatures if exists
+Hibernate: create table weather (id integer generated by default as identity, city varchar(255), date date, lat float, lon float, state varchar(255), primary key (id))
+Hibernate: create table weather_temperatures (weather_id integer not null, temperatures double)
+Hibernate: alter table weather_temperatures add constraint FKr6t1tvrqfp9248r4gljvdsdaj foreign key (weather_id) references weather
+2022-08-09 10:56:22.472  INFO 65166 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-09 10:56:22.472  INFO 65166 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-09 10:56:22.622  WARN 65166 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-09 10:56:22.670  INFO 65166 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-09 10:56:22.775  INFO 65166 --- [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:weather_db'
+2022-08-09 10:56:22.801  INFO 65166 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2022-08-09 10:56:22.801  INFO 65166 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-08-09 10:56:22.806  INFO 65166 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 5 ms
+2022-08-09 10:56:22.811  INFO 65166 --- [           main] c.h.w.WeatherApiRestControllerTest       : Started WeatherApiRestControllerTest in 0.662 seconds (JVM running for 12.251)
+Hibernate: select weather0_.id as id1_0_, weather0_.city as city2_0_, weather0_.date as date3_0_, weather0_.lat as lat4_0_, weather0_.lon as lon5_0_, weather0_.state as state6_0_ from weather weather0_
+2022-08-09 10:56:22.829  WARN 65166 --- [           main] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unrecognized field "id" (class com.hackerrank.weather.resource.WeatherRequest), not marked as ignorable; nested exception is com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "id" (class com.hackerrank.weather.resource.WeatherRequest), not marked as ignorable (6 known properties: "state", "lon", "date", "lat", "city", "temperatures"])
+ at [Source: (PushbackInputStream); line: 1, column: 8] (through reference chain: com.hackerrank.weather.resource.WeatherRequest["id"])]
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /weather
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8"]
+             Body = {"id":1,"date":"2019-06-10","lat":41.8818,"lon":-87.6231,"city":"Chicago","state":"Illinois","temperatures":[24.0,21.5,24.0,19.5,25.5,25.5,24.0,25.0,23.0,22.0,18.0,18.0,23.5,23.0,23.0,25.5,21.0,20.5,20.0,18.5,20.5,21.0,25.0,20.5]}
+    Session Attrs = {}
+
+Handler:
+             Type = com.hackerrank.weather.controller.WeatherApiRestController
+           Method = com.hackerrank.weather.controller.WeatherApiRestController#submitWeatherRecord(WeatherRequest)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.http.converter.HttpMessageNotReadableException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = []
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /weather
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8"]
+             Body = {"id":1,"date":"2019-06-10","lat":41.8818,"lon":-87.6231,"city":"Chicago","state":"Illinois","temperatures":[24.0,21.5,24.0,19.5,25.5,25.5,24.0,25.0,23.0,22.0,18.0,18.0,23.5,23.0,23.0,25.5,21.0,20.5,20.0,18.5,20.5,21.0,25.0,20.5]}
+    Session Attrs = {}
+
+Handler:
+             Type = com.hackerrank.weather.controller.WeatherApiRestController
+           Method = com.hackerrank.weather.controller.WeatherApiRestController#submitWeatherRecord(WeatherRequest)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.http.converter.HttpMessageNotReadableException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = []
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+]]></system-out>
+  </testcase>
+  <testcase name="testWeatherEndpointWithGETListAndDateOrder" classname="com.hackerrank.weather.WeatherApiRestControllerTest" time="0.682">
+    <failure message="Status expected:&lt;201&gt; but was:&lt;400&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: Status expected:<201> but was:<400>
+	at com.hackerrank.weather.WeatherApiRestControllerTest.testWeatherEndpointWithGETListAndDateOrder(WeatherApiRestControllerTest.java:183)
+]]></failure>
+    <system-out><![CDATA[2022-08-09 10:56:22.836  INFO 65166 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-08-09 10:56:22.836  INFO 65166 --- [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-08-09 10:56:22.836  INFO 65166 --- [           main] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+Hibernate: drop table weather if exists
+2022-08-09 10:56:22.838 ERROR 65166 --- [           main] .SchemaDropperImpl$DelayedDropActionImpl : HHH000478: Unsuccessful: drop table weather if exists
+Hibernate: drop table weather_temperatures if exists
+2022-08-09 10:56:22.843  INFO 65166 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2022-08-09 10:56:22.847  INFO 65166 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.1.RELEASE)
+
+2022-08-09 10:56:22.868  INFO 65166 --- [           main] c.h.w.WeatherApiRestControllerTest       : Starting WeatherApiRestControllerTest on ihristov-MB with PID 65166 (started by ivohristov in /Users/ivohristov/Projects/WeatherTestApi)
+2022-08-09 10:56:22.870  INFO 65166 --- [           main] c.h.w.WeatherApiRestControllerTest       : No active profile set, falling back to default profiles: default
+2022-08-09 10:56:22.996  INFO 65166 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data repositories in DEFAULT mode.
+2022-08-09 10:56:23.008  INFO 65166 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11ms. Found 1 repository interfaces.
+2022-08-09 10:56:23.053  INFO 65166 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-08-09 10:56:23.088  INFO 65166 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2022-08-09 10:56:23.092  INFO 65166 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2022-08-09 10:56:23.100  INFO 65166 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-08-09 10:56:23.106  INFO 65166 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Hibernate: drop table weather if exists
+Hibernate: drop table weather_temperatures if exists
+Hibernate: create table weather (id integer generated by default as identity, city varchar(255), date date, lat float, lon float, state varchar(255), primary key (id))
+Hibernate: create table weather_temperatures (weather_id integer not null, temperatures double)
+Hibernate: alter table weather_temperatures add constraint FKr6t1tvrqfp9248r4gljvdsdaj foreign key (weather_id) references weather
+2022-08-09 10:56:23.176  INFO 65166 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-08-09 10:56:23.176  INFO 65166 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-08-09 10:56:23.301  WARN 65166 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-08-09 10:56:23.333  INFO 65166 --- [           main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-08-09 10:56:23.449  INFO 65166 --- [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:weather_db'
+2022-08-09 10:56:23.488  INFO 65166 --- [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2022-08-09 10:56:23.488  INFO 65166 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2022-08-09 10:56:23.491  INFO 65166 --- [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2022-08-09 10:56:23.498  INFO 65166 --- [           main] c.h.w.WeatherApiRestControllerTest       : Started WeatherApiRestControllerTest in 0.649 seconds (JVM running for 12.938)
+Hibernate: select weather0_.id as id1_0_, weather0_.city as city2_0_, weather0_.date as date3_0_, weather0_.lat as lat4_0_, weather0_.lon as lon5_0_, weather0_.state as state6_0_ from weather weather0_
+2022-08-09 10:56:23.512  WARN 65166 --- [           main] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unrecognized field "id" (class com.hackerrank.weather.resource.WeatherRequest), not marked as ignorable; nested exception is com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "id" (class com.hackerrank.weather.resource.WeatherRequest), not marked as ignorable (6 known properties: "state", "lon", "date", "lat", "city", "temperatures"])
+ at [Source: (PushbackInputStream); line: 1, column: 8] (through reference chain: com.hackerrank.weather.resource.WeatherRequest["id"])]
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /weather
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8"]
+             Body = {"id":1,"date":"2019-06-10","lat":41.8818,"lon":-87.6231,"city":"Chicago","state":"Illinois","temperatures":[24.0,21.5,24.0,19.5,25.5,25.5,24.0,25.0,23.0,22.0,18.0,18.0,23.5,23.0,23.0,25.5,21.0,20.5,20.0,18.5,20.5,21.0,25.0,20.5]}
+    Session Attrs = {}
+
+Handler:
+             Type = com.hackerrank.weather.controller.WeatherApiRestController
+           Method = com.hackerrank.weather.controller.WeatherApiRestController#submitWeatherRecord(WeatherRequest)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.http.converter.HttpMessageNotReadableException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = []
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /weather
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8"]
+             Body = {"id":1,"date":"2019-06-10","lat":41.8818,"lon":-87.6231,"city":"Chicago","state":"Illinois","temperatures":[24.0,21.5,24.0,19.5,25.5,25.5,24.0,25.0,23.0,22.0,18.0,18.0,23.5,23.0,23.0,25.5,21.0,20.5,20.0,18.5,20.5,21.0,25.0,20.5]}
+    Session Attrs = {}
+
+Handler:
+             Type = com.hackerrank.weather.controller.WeatherApiRestController
+           Method = com.hackerrank.weather.controller.WeatherApiRestController#submitWeatherRecord(WeatherRequest)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = org.springframework.http.converter.HttpMessageNotReadableException
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 400
+    Error message = null
+          Headers = []
+     Content type = null
+             Body = 
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+]]></system-out>
+  </testcase>
+</testsuite>

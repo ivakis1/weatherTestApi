@@ -1,0 +1,10 @@
+/Users/ivohristov/Projects/WeatherTestApi/src/main/java/com/hackerrank/weather/service/mapper/WeatherMapper.java
+/Users/ivohristov/Projects/WeatherTestApi/src/main/java/com/hackerrank/weather/service/WeatherService.java
+/Users/ivohristov/Projects/WeatherTestApi/src/main/java/com/hackerrank/weather/controller/WeatherApiRestController.java
+/Users/ivohristov/Projects/WeatherTestApi/src/main/java/com/hackerrank/weather/model/Weather.java
+/Users/ivohristov/Projects/WeatherTestApi/src/main/java/com/hackerrank/weather/Application.java
+/Users/ivohristov/Projects/WeatherTestApi/src/main/java/com/hackerrank/weather/resource/WeatherRequest.java
+/Users/ivohristov/Projects/WeatherTestApi/src/main/java/com/hackerrank/weather/resource/WeatherResponse.java
+/Users/ivohristov/Projects/WeatherTestApi/src/main/java/com/hackerrank/weather/config/ObjectMapperConfig.java
+/Users/ivohristov/Projects/WeatherTestApi/src/main/java/com/hackerrank/weather/service/WeatherServiceImpl.java
+/Users/ivohristov/Projects/WeatherTestApi/src/main/java/com/hackerrank/weather/repository/WeatherRepository.java

@@ -1,0 +1,30 @@
+-------------------------------------------------------------------------------
+Test set: com.hackerrank.weather.WeatherApiRestControllerTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 6, Errors: 0, Skipped: 0, Time elapsed: 11.355 s <<< FAILURE! - in com.hackerrank.weather.WeatherApiRestControllerTest
+testWeatherEndpointWithPOST  Time elapsed: 1.532 s  <<< FAILURE!
+java.lang.AssertionError: No value at JSON path "$.id"
+	at com.hackerrank.weather.WeatherApiRestControllerTest.testWeatherEndpointWithPOST(WeatherApiRestControllerTest.java:57)
+Caused by: java.lang.IllegalArgumentException: json can not be null or empty
+	at com.hackerrank.weather.WeatherApiRestControllerTest.testWeatherEndpointWithPOST(WeatherApiRestControllerTest.java:57)
+
+testWeatherEndpointWithGETListAndCityFilter  Time elapsed: 0.966 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<201> but was:<400>
+	at com.hackerrank.weather.WeatherApiRestControllerTest.testWeatherEndpointWithGETListAndCityFilter(WeatherApiRestControllerTest.java:136)
+
+testWeatherEndpointWithGETListAndDateFilter  Time elapsed: 0.838 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<201> but was:<400>
+	at com.hackerrank.weather.WeatherApiRestControllerTest.testWeatherEndpointWithGETListAndDateFilter(WeatherApiRestControllerTest.java:104)
+
+testWeatherEndpointWithGETById  Time elapsed: 0.723 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<201> but was:<400>
+	at com.hackerrank.weather.WeatherApiRestControllerTest.testWeatherEndpointWithGETById(WeatherApiRestControllerTest.java:219)
+
+testWeatherEndpointWithGETList  Time elapsed: 0.699 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<201> but was:<400>
+	at com.hackerrank.weather.WeatherApiRestControllerTest.testWeatherEndpointWithGETList(WeatherApiRestControllerTest.java:75)
+
+testWeatherEndpointWithGETListAndDateOrder  Time elapsed: 0.682 s  <<< FAILURE!
+java.lang.AssertionError: Status expected:<201> but was:<400>
+	at com.hackerrank.weather.WeatherApiRestControllerTest.testWeatherEndpointWithGETListAndDateOrder(WeatherApiRestControllerTest.java:183)
+
